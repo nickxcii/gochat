@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GoChat - Simple Chatroom</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Username Setup Screen -->
+        <div id="username-screen" class="screen">
+            <div class="username-form">
+                <h1>GoChat</h1>
+                <p>Enter your username</p>
+                <input type="text" id="username-input" placeholder="Your username..." maxlength="20">
+                <button id="continue-btn">Continue</button>
+            </div>
+        </div>
+
+        <!-- Room Selection Screen -->
+        <div id="room-screen" class="screen hidden">
+            <div class="room-form">
+                <h2>Join or Create a Room</h2>
+                
+                <div class="room-options">
+                    <div class="option-section">
+                        <h3>Create New Room</h3>
+                        <input type="text" id="room-name-input" placeholder="Room name (optional)" maxlength="30">
+                        <button id="create-room-btn">Create Room</button>
+                    </div>
+                    
+                    <div class="divider">
+                        <span>OR</span>
+                    </div>
+                    
+                    <div class="option-section">
+                        <h3>Join Existing Room</h3>
+                        <input type="text" id="room-code-input" placeholder="Enter room code..." maxlength="6">
+                        <button id="join-room-btn">Join Room</button>
+                    </div>
+                </div>
+                
+                <button id="back-to-username-btn" class="back-btn">Back</button>
+            </div>
+        </div>
+
+        <!-- Chat Screen -->
+        <div id="chat-screen" class="screen hidden">
+            <div class="chat-header">
+                <div class="chat-title">
+                    <h2 id="room-name">GoChat</h2>
+                    <span id="room-code-display">Room Code: </span>
+                </div>
+                <div class="user-info">
+                    <span id="current-username"></span>
+                    <span id="user-count">1 user online</span>
+                    <button id="leave-room-btn" class="leave-btn">Leave Room</button>
+                </div>
+            </div>
+
+            <div id="messages-container">
+                <div id="messages"></div>
+            </div>
+
+            <div class="chat-input-container">
+                <input type="text" id="message-input" placeholder="Type a message..." maxlength="500">
+                <button id="send-btn">Send</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
