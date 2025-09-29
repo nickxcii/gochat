@@ -1,8 +1,12 @@
 {
   "name": "gochat",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "description": "A simple, elegant real-time chatroom application with private rooms and unique codes",
+  "main": "server.js",
+  "engines": {
+    "node": ">=14.0.0",
+    "npm": ">=6.0.0"
+  },
   "scripts": {
     "start": "node server.js",
     "dev": "node server.js",
@@ -12,8 +16,16 @@
     "type": "git",
     "url": "git+https://github.com/nickxcii/gochat.git"
   },
-  "keywords": [],
-  "author": "",
+  "keywords": [
+    "chat",
+    "real-time",
+    "socket.io",
+    "rooms",
+    "messaging",
+    "node.js",
+    "express"
+  ],
+  "author": "nickxcii",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/nickxcii/gochat/issues"
